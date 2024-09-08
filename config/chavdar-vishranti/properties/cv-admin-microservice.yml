@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://sharad-chavhan:sharad-chavdar-vishranti@chavdar-vishranti.t7dvk.mongodb.net/chavdar-vishranti?retryWrites=true&w=majority
+
+
+

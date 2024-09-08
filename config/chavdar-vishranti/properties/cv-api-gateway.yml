@@ -1,0 +1,33 @@
+eureka:
+  cloud:
+    gateway:
+      routes:
+        - id: cv-auth-service
+          uri: lb://cv-auth-service
+          predicates:
+            - Path=/cv-auth/**
+            
+        - id: admin-micro-service
+          uri: lb://cv-admin-micro-service
+          predicates:
+            - Path=/cv-ams/**
+          # filters:
+          #   - StripPrefix=0
+
+        - id: hotel-micro-service
+          uri: lb://cv-hotel-micro-service
+          predicates:
+            - Path=/cv-hms/**
+          # filters:
+          #   - StripPrefix=0
+
+        
+  # Keystore properties for HTTPS
+  # ssl:
+  #   key-store: classpath:keystore.p12
+  #   key-store-password: sharad
+  #   key-store-type: PKCS12
+  #   key-alias: myapp
+
+
+  

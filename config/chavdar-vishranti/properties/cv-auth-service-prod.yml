@@ -1,0 +1,13 @@
+spring:
+  profiles: dev
+  
+server:
+  port: 8063
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://103.168.18.176:8060/eureka/
+
+  config:
+    import: optional:configserver:http://103.168.18.176:8061
