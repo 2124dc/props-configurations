@@ -1,31 +1,27 @@
-## How to Use Profiles
+### How to Activate a Profile:
 
-When deploying or running the service locally or on production, you can specify the profile:
+To activate a profile when running your application, you can use the following options:
 
-### For Development
+- **Using Command Line Arguments:**
 
-You can use the following command:
+  ```bash
+  java -jar cv-auth-server.jar --spring.profiles.active=dev
+  ```
 
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=dev
-```
+  or
 
-Or:
+  ```bash
+  java -jar cv-auth-server.jar --spring.profiles.active=prod
+  ```
 
-```bash
-java -jar cv-auth-service.jar --spring.profiles.active=dev
-```
+- **Using Maven:**
 
-### For Production
+  ```bash
+  mvn spring-boot:run -Dspring-boot.run.profiles=dev
+  ```
 
-You can use the following command:
+  or
 
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=prod
-```
-
-Or:
-
-```bash
-java -jar cv-auth-service.jar --spring.profiles.active=prod
-```
+  ```bash
+  mvn spring-boot:run -Dspring-boot.run.profiles=prod
+  ```
