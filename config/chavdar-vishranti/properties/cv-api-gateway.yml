@@ -7,7 +7,7 @@ eureka:
           predicates:
             - Path=/cv-auth/**
           filters:
-            - StripPrefix=0
+            - StripPrefix=1
             
         - id: admin-micro-service
           uri: lb://cv-admin-micro-service
