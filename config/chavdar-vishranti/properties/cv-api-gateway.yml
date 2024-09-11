@@ -6,13 +6,15 @@ eureka:
           uri: lb://cv-auth-service
           predicates:
             - Path=/cv-auth/**
+          filters:
+            - StripPrefix=0
             
         - id: admin-micro-service
           uri: lb://cv-admin-micro-service
           predicates:
             - Path=/cv-ams/**
-          # filters:
-          #   - StripPrefix=0
+          filters:
+            - StripPrefix=0
 
         - id: hotel-micro-service
           uri: lb://cv-hotel-micro-service
