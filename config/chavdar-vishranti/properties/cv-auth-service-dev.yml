@@ -1,3 +1,6 @@
+server:
+  port: 8063
+
 spring:
   config:
     activate:
@@ -7,9 +10,9 @@ spring:
       host: localhost
       port: 27017
       database: chavdar-vishranti
-      
-server:
-  port: 8063
+  cloud:
+    config:
+      uri: http://localhost:8061   
 
 eureka:
   client:
