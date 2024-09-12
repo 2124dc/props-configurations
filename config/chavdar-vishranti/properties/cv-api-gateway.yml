@@ -3,7 +3,7 @@ eureka:
     gateway:
       routes:
         - id: cv-auth-service
-          uri: http://cv-auth-service:8063
+          uri: http://SHARACHA01.mshome.net:8063
           predicates:
             - Path=/auth/**
         
