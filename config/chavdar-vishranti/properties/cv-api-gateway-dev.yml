@@ -1,15 +1,17 @@
+server:
+  port: 8062
+
 spring:
   config:
     activate:
       on-profile: dev
-  
-server:
-  port: 8062
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8060/eureka/
-
-  config:
-    import: optional:configserver:http://localhost:8061
+  cloud:
+    discovery:
+      client:
+        registration:
+          eureka:
+            enabled: true
+    eureka:
+      client:
+        service-url:
+          defaultZone: http://localhost:8060/eureka/

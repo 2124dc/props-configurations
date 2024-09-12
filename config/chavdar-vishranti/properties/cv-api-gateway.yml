@@ -1,18 +1,3 @@
-eureka:
-  cloud:
-    gateway:
-      routes:
-        - id: cv-auth-service
-          uri: lb://cv-auth-service
-          predicates:
-            - Path=/auth/**
-          # filters:
-          #   - StripPrefix=0
-        
-        
-  # Keystore properties for HTTPS
-  # ssl:
-  #   key-store: classpath:keystore.p12
-  #   key-store-password: sharad
-  #   key-store-type: PKCS12
-  #   key-alias: myapp
+spring:
+  application:
+    name: cv-api-gateway
