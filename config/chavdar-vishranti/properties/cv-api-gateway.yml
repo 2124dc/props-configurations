@@ -3,7 +3,7 @@ eureka:
     gateway:
       routes:
         - id: cv-auth-service
-          uri: lb://cv-auth-service
+          uri: lb://CV-AUTH-SERVICE
           predicates:
             - Path=/cv-auth/**
           filters:
