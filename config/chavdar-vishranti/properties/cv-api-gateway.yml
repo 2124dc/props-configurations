@@ -5,7 +5,7 @@ eureka:
         - id: cv-auth-service
           uri: lb://CV-AUTH-SERVICE
           predicates:
-            - Path=/**
+            - Path=/auth/**
         
   # Keystore properties for HTTPS
   # ssl:
