@@ -3,9 +3,24 @@ eureka:
     gateway:
       routes:
         - id: cv-auth-service
-          uri: http://SHARACHA01.mshome.net:8063
+          uri: lb://cv-auth-service
           predicates:
-            - Path=/auth/**
+            - Path=/cv-auth/**
+          filters:
+            - StripPrefix=2
+            
+        - id: admin-micro-service
+          uri: lb://cv-admin-micro-service
+          predicates:
+            - Path=/cv-ams/**
+          filters:
+            - StripPrefix=2
+        - id: hotel-micro-service
+          uri: lb://cv-hotel-micro-service
+          predicates:
+            - Path=/cv-hms/**
+          # filters:
+          #   - StripPrefix=0
         
   # Keystore properties for HTTPS
   # ssl:
@@ -13,6 +28,3 @@ eureka:
   #   key-store-password: sharad
   #   key-store-type: PKCS12
   #   key-alias: myapp
-
-
-  
