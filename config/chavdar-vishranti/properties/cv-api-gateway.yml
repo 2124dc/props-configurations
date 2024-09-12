@@ -6,22 +6,22 @@ eureka:
           uri: lb://CV-AUTH-SERVICE
           predicates:
             - Path=/auths/**
-          filters:
-            - StripPrefix=0
+          # filters:
+          #   - StripPrefix=0
             
         - id: admin-micro-service
           uri: lb://cv-admin-micro-service
           predicates:
             - Path=/adminms/**
-          filters:
-            - StripPrefix=2
+          # filters:
+          #   - StripPrefix=2
 
         - id: hotel-micro-service
           uri: lb://cv-hotel-micro-service
           predicates:
             - Path=/hotelms/**
-          filters:
-            - StripPrefix=0
+          # filters:
+          #   - StripPrefix=0
 
         
   # Keystore properties for HTTPS
