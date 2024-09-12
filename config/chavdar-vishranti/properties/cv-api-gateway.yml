@@ -1,3 +1,17 @@
 spring:
   application:
     name: cv-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: cv-auth-service
+          uri: lb://cv-auth-service
+          predicates:
+            - Path=/cv-auth/**
+          # filters:
+          #   - StripPrefix=0
+
+        - id: admin-micro-service
+          uri: lb://admin-micro-service
+          predicates:
+            - Path=/cv-ams/**
