@@ -11,7 +11,7 @@ spring:
         registration:
           eureka:
             enabled: true
-    eureka:
-      client:
-        service-url:
-          defaultZone: http://localhost:8060/eureka/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8060/eureka/
