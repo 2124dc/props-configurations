@@ -9,7 +9,7 @@ spring:
           # filters:
           #   - StripPrefix=0
 
-        - id: admin-micro-service
-          uri: lb://admin-micro-service
+        - id: cv-admin-microservice
+          uri: lb://cv-admin-microservice
           predicates:
             - Path=/cv-ams/**
