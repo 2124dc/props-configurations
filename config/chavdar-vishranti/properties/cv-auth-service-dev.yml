@@ -1,15 +1,12 @@
-server:
-  port: 8063
-
 spring:
   config:
     activate:
       on-profile: dev
   discovery:
-      client:
-        registration:
-          eureka:
-            enabled: true
+    client:
+      registration:
+        eureka:
+          enabled: true
   data:
     mongodb:
       host: localhost

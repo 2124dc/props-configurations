@@ -2,9 +2,16 @@ spring:
   config:
     activate:
       on-profile: dev
-
-server:
-  port: 8071
+  discovery:
+    client:
+      registration:
+        eureka:
+          enabled: true
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: chavdar-vishranti
 
 eureka:
   client:

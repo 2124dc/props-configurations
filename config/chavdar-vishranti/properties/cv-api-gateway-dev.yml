@@ -1,16 +1,12 @@
-server:
-  port: 8062
-
 spring:
   config:
     activate:
       on-profile: dev
-  cloud:
-    discovery:
-      client:
-        registration:
-          eureka:
-            enabled: true
+  discovery:
+    client:
+      registration:
+        eureka:
+          enabled: true
 eureka:
   client:
     service-url:

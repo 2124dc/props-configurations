@@ -1,3 +1,6 @@
+server:
+  port: 8062
+
 spring:
   cloud:
     gateway:
@@ -12,4 +15,14 @@ spring:
         - id: cv-admin-microservice
           uri: lb://cv-admin-microservice
           predicates:
-            - Path=/cv-ams/**
+            - Path=/cv-admin/**
+
+        - id: cv-owner-microservice
+          uri: lb://cv-owner-microservice
+          predicates:
+            - Path=/cv-owner/**
+
+        - id: cv-hotel-microservice
+          uri: lb://cv-hotel-microservice
+          predicates:
+            - Path=/cv-hotel/**

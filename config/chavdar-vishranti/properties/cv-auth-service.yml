@@ -1,3 +1,6 @@
+server:
+  port: 8063
+
 jwt:
   secret: your-256-bit-base64-encoded-key
   expiration: 3600000

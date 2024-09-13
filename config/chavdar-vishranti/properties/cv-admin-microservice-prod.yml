@@ -2,9 +2,14 @@ spring:
   config:
     activate:
       on-profile: prod
-
-server:
-  port: 8071
+  discovery:
+    client:
+      registration:
+        eureka:
+          enabled: true
+  data:
+    mongodb:
+      uri: mongodb+srv://sharad-chavhan:sharad-chavdar-vishranti@chavdar-vishranti.t7dvk.mongodb.net/chavdar-vishranti?retryWrites=true&w=majority&ssl=true
   
 eureka:
   client:
