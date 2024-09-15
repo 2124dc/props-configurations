@@ -16,7 +16,8 @@ spring:
           uri: lb://cv-admin-microservice
           predicates:
             - Path=/cv-admin/**
-
+          filters:
+            - TokenRelay
         - id: cv-owner-microservice
           uri: lb://cv-owner-microservice
           predicates:
