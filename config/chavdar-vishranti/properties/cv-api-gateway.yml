@@ -9,20 +9,14 @@ spring:
           uri: lb://cv-auth-service
           predicates:
             - Path=/cv-auth/**
-          # filters:
-          #   - StripPrefix=0
-
         - id: cv-admin-microservice
           uri: lb://cv-admin-microservice
           predicates:
             - Path=/cv-admin/**
-          filters:
-            - TokenRelay
         - id: cv-owner-microservice
           uri: lb://cv-owner-microservice
           predicates:
             - Path=/cv-owner/**
-
         - id: cv-hotel-microservice
           uri: lb://cv-hotel-microservice
           predicates:
