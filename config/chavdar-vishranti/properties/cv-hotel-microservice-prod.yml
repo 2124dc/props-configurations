@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  discovery:
+    client:
+      registration:
+        eureka:
+          enabled: true
+  data:
+    mongodb:
+      uri: mongodb+srv://sharad-chavhan:sharad-chavdar-vishranti@chavdar-vishranti.t7dvk.mongodb.net/chavdar-vishranti?retryWrites=true&w=majority&ssl=true
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://103.168.18.176:8060/eureka/
+
+
