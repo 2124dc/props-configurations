@@ -16,3 +16,5 @@ jenkins as admin user
 localhost:8081
 admin/
 9edeb849b908477fa6f51d3f2cd7f8a9
+
+dev mongo - 2124.programmer/cv-dev-db
