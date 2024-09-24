@@ -17,5 +17,7 @@ localhost:8081
 admin/
 9edeb849b908477fa6f51d3f2cd7f8a9
 
+2124.programmer@gmail.com/Mongo@Sharad
+
 cv-dev-db
 mongodb+srv://2124programmer:<db_password>@cv-dev.3n3m5.mongodb.net/?retryWrites=true&w=majority&appName=cv-dev
