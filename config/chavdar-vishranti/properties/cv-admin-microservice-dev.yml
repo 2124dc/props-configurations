@@ -9,9 +9,13 @@ spring:
           enabled: true
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: chavdar-vishranti
+      # uri: mongodb+srv://sharad-chavhan:sharad-chavdar-vishranti@chavdar-vishranti.t7dvk.mongodb.net/chavdar-vishranti?retryWrites=true&w=majority&ssl=true
+      uri:  mongodb+srv://2124programmer:cv-dev-db@cv-dev.3n3m5.mongodb.net/chavdar-vishranti-dev?retryWrites=true&w=majority&appName=cv-dev
+  # data:
+  #   mongodb:
+  #     host: localhost
+  #     port: 27017
+  #     database: chavdar-vishranti
 
 eureka:
   client:
